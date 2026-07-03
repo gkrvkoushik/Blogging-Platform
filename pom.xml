@@ -83,6 +83,14 @@
             <scope>compile</scope>
         </dependency>
 
+        <!-- Source: https://mvnrepository.com/artifact/io.github.mjourard/env-file-maven-plugin -->
+        <dependency>
+            <groupId>io.github.mjourard</groupId>
+            <artifactId>env-file-maven-plugin</artifactId>
+            <version>2.1.0</version>
+            <scope>compile</scope>
+        </dependency>
+
 
     </dependencies>
 

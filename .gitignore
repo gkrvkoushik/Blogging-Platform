@@ -1,33 +1,107 @@
-HELP.md
+############################
+# Maven
+############################
 target/
-.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
 
-### STS ###
+.mvn/wrapper/maven-wrapper.jar
+
+############################
+# Environment Variables
+############################
+.env
+.env.*
+!.env.example
+
+############################
+# Logs
+############################
+*.log
+logs/
+
+############################
+# IntelliJ IDEA
+############################
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+############################
+# Eclipse / STS
+############################
 .apt_generated
 .classpath
 .factorypath
 .project
-.settings
+.settings/
 .springBeans
 .sts4-cache
 
-### IntelliJ IDEA ###
-.idea
-*.iws
-*.iml
-*.ipr
+############################
+# VS Code
+############################
+.vscode/
 
-### NetBeans ###
+############################
+# NetBeans
+############################
 /nbproject/private/
 /nbbuild/
 /dist/
 /nbdist/
 /.nb-gradle/
+
+############################
+# Gradle
+############################
 build/
 !**/src/main/**/build/
 !**/src/test/**/build/
 
-### VS Code ###
-.vscode/
+############################
+# OS Files
+############################
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+############################
+# Java
+############################
+*.class
+*.jar
+*.war
+*.ear
+
+############################
+# Spring Boot
+############################
+spring.log
+
+############################
+# Lombok
+############################
+.lombok
+
+############################
+# Temporary Files
+############################
+*.tmp
+*.swp
+*.swo
+*~
+
+############################
+# Application Secrets
+############################
+application-local.properties
+application-dev.properties
+application-prod.properties
+
+############################
+# Misc
+############################
+HELP.md

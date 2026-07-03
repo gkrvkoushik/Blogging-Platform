@@ -1,8 +1,8 @@
 package com.application.blog.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
-import jakarta.validation.constraints.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -13,27 +13,32 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 @Entity
-@Table(name="user")
+@Table(name = "blog")
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
-public class User {
+@NoArgsConstructor
+public class Blog {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int userid;
+    private int blogid;
 
-    private String name;
+    @Column(nullable = false)
+    private String title;
 
-    @Email(message = "Provide proper email")
-    private String email;
+    @JsonBackReference
+    @ManyToOne
+    @JoinColumn(name="userid")
+    private User author;
 
-    @Size(min=6)
-    private String password;
+    private String category;
+
+    private String description;
 
     @JsonManagedReference
-    @OneToMany(fetch=FetchType.LAZY,mappedBy = "author")
-    private List<Blog> blogs;
+    @OneToMany(fetch = FetchType.LAZY,mappedBy = "blog")
+    private List<Comment> comments;
+
 
     @CreationTimestamp
     private LocalDateTime createdAt;
