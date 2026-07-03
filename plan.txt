@@ -1,0 +1,53 @@
+blog
+
+features:
+1. User register email & password
+2. User blog initiate
+    Title
+    Category
+    Description
+
+3. User sees blog
+    user can upvote/like the blog
+    comment
+
+4. Functionalities
+    User
+        blog post
+        blog like/comment
+        view others blogs
+        Analytics(final feature)
+
+
+Entities:
+1. User
+    id
+    name
+    email
+    password
+    blogs [
+        {
+            blog
+        }
+     ]
+
+2. Blog_creation
+    id
+    title
+    category
+    description
+
+3. Blog_post
+    id
+    likes_count : unique to user_id
+    comments : [
+        {
+            comment
+        }
+    ]
+
+4. Comment
+    id
+    blog_id
+    user_id
+    comment
