@@ -7,7 +7,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name="like",
+@Table(name="blog_like",
         uniqueConstraints = {
             @UniqueConstraint(columnNames = {"userid","blogid"})
         }

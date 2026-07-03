@@ -105,3 +105,6 @@ application-prod.properties
 # Misc
 ############################
 HELP.md
+
+
+src/main/resources/application-local.properties
